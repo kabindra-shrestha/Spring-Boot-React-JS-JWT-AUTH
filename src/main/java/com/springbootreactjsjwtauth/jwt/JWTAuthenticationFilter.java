@@ -1,7 +1,7 @@
 package com.springbootreactjsjwtauth.jwt;
 
-import com.springbootreactjsjwtauth.entity.common.Users;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.springbootreactjsjwtauth.entity.common.Users;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.InternalAuthenticationServiceException;
