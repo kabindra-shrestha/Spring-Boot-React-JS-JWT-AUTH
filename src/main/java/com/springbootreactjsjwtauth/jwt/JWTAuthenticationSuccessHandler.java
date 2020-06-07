@@ -1,10 +1,10 @@
 package com.springbootreactjsjwtauth.jwt;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.springbootreactjsjwtauth.entity.common.Users;
 import com.springbootreactjsjwtauth.entity.jwt.SuccessResponse;
 import com.springbootreactjsjwtauth.service.TokenService;
 import com.springbootreactjsjwtauth.service.UserService;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;

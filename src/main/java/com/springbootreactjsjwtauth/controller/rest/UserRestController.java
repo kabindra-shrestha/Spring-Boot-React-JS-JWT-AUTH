@@ -14,6 +14,7 @@ import static com.springbootreactjsjwtauth.utils.LinkConfig.*;
 
 @RestController
 @RequestMapping(value = BASE_URL + USER_URL)
+@CrossOrigin(origins = "${frontend.endpoint}")
 public class UserRestController {
 
     @Autowired

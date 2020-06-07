@@ -1,7 +1,7 @@
 package com.springbootreactjsjwtauth.jwt;
 
-import com.springbootreactjsjwtauth.entity.jwt.ErrorResponse;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.springbootreactjsjwtauth.entity.jwt.ErrorResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
