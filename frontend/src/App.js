@@ -4,6 +4,7 @@ import {Col, Container, Row} from "react-bootstrap";
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import Welcome from "./components/Welcome";
 import Login from "./components/login/Login";
+import Dashboard from "./components/dashboard/Dashboard";
 
 export default function App() {
 
@@ -20,6 +21,7 @@ export default function App() {
                             <Route path="/" exact
                                    component={() => <Welcome heading={heading} quote={quote} footer={footer}/>}/>
                             <Route path="/login/admin" exact component={Login}/>
+                            <Route path="/dashboard" exact component={Dashboard}/>
                         </Switch>
                     </Col>
                 </Row>

@@ -49,7 +49,7 @@ export default class Login extends Component {
                 if (user.status) {
                     this.setState({"show": true, "status": user.status, "message": user.message});
                     setTimeout(() => this.setState({"show": false}), 3000);
-                    // setTimeout(() => this.dashboard(), 3000);
+                    setTimeout(() => this.dashboard(), 3000);
                 } else {
                     this.setState({"show": true, "status": user.status, "message": user.message});
                     setTimeout(() => this.setState({"show": false}), 3000);
