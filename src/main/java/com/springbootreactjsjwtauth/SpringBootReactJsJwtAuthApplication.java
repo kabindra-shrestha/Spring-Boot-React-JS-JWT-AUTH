@@ -17,6 +17,12 @@ import java.util.UUID;
 @SpringBootApplication
 public class SpringBootReactJsJwtAuthApplication extends SpringBootServletInitializer implements CommandLineRunner {
 
+    private GeneratePassword generatePassword = new GeneratePassword();
+    @Autowired
+    private UserModel userModel;
+    @Autowired
+    private RoleModel roleModel;
+
     public static void main(String[] args) {
         SpringApplication.run(SpringBootReactJsJwtAuthApplication.class, args);
     }
@@ -25,13 +31,6 @@ public class SpringBootReactJsJwtAuthApplication extends SpringBootServletInitia
     protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
         return application.sources(SpringBootReactJsJwtAuthApplication.class);
     }
-
-    private GeneratePassword generatePassword = new GeneratePassword();
-
-    @Autowired
-    private UserModel userModel;
-    @Autowired
-    private RoleModel roleModel;
 
     private Role findRoleById(long id) {
         return roleModel.findById(id);
