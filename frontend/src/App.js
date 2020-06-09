@@ -12,12 +12,12 @@ export default function App() {
     const footer = "Kabindra Shrestha";
 
     return (
-        <Router>
+        <Router basename={process.env.PUBLIC_URL}>
             <Switch>
-                <Route path={process.env.PUBLIC_URL + '/'} exact
+                <Route path="/" exact
                        component={() => <Welcome heading={heading} quote={quote} footer={footer}/>}/>
-                <Route path={process.env.PUBLIC_URL + '/login/admin'} exact component={Login}/>
-                <Route path={process.env.PUBLIC_URL + '/dashboard'} exact component={Dashboard}/>
+                <Route path="/login/admin" exact component={Login}/>
+                <Route path="/dashboard" exact component={Dashboard}/>
             </Switch>
         </Router>
     );
