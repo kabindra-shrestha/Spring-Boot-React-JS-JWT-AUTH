@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import {HashRouter as Router, Route, Switch} from "react-router-dom";
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import Welcome from "./components/Welcome";
 import Login from "./components/login/Login";
 import Dashboard from "./components/dashboard/Dashboard";
@@ -14,10 +14,10 @@ export default function App() {
     return (
         <Router>
             <Switch>
-                <Route path="/" exact
+                <Route path={process.env.PUBLIC_URL + '/'} exact
                        component={() => <Welcome heading={heading} quote={quote} footer={footer}/>}/>
-                <Route path="/login/admin" exact component={Login}/>
-                <Route path="/dashboard" exact component={Dashboard}/>
+                <Route path={process.env.PUBLIC_URL + '/login/admin'} exact component={Login}/>
+                <Route path={process.env.PUBLIC_URL + '/dashboard'} exact component={Dashboard}/>
             </Switch>
         </Router>
     );
