@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.css';
-import {Col, Container, Row} from "react-bootstrap";
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import Welcome from "./components/Welcome";
 import Login from "./components/login/Login";
@@ -14,18 +13,12 @@ export default function App() {
 
     return (
         <Router>
-            <Container>
-                <Row>
-                    <Col lg={12} className={"margin-top"}>
-                        <Switch>
-                            <Route path="/" exact
-                                   component={() => <Welcome heading={heading} quote={quote} footer={footer}/>}/>
-                            <Route path="/login/admin" exact component={Login}/>
-                            <Route path="/dashboard" exact component={Dashboard}/>
-                        </Switch>
-                    </Col>
-                </Row>
-            </Container>
+            <Switch>
+                <Route path="/" exact
+                       component={() => <Welcome heading={heading} quote={quote} footer={footer}/>}/>
+                <Route path="/login/admin" exact component={Login}/>
+                <Route path="/dashboard" exact component={Dashboard}/>
+            </Switch>
         </Router>
     );
 
