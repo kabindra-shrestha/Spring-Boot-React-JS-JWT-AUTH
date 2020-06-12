@@ -6,7 +6,7 @@ import {Switch} from "react-bootstrap";
 import {history} from '../_helpers';
 import {alertActions} from '../_actions';
 import {Login} from "../login/Login";
-import Dashboard from "../dashboard/Dashboard";
+import {Dashboard} from "../dashboard/Dashboard";
 import {PrivateRoute} from "../_components";
 import Welcome from "../main/Welcome";
 

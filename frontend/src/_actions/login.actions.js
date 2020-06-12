@@ -1,5 +1,5 @@
 import {loginConstants} from '../_constants';
-import {userService} from '../_services';
+import {loginService} from '../_services';
 import {alertActions} from './';
 import {history} from '../_helpers';
 
@@ -12,7 +12,7 @@ function login(username, password) {
     return dispatch => {
         dispatch(request({username}));
 
-        userService.login(username, password)
+        loginService.login(username, password)
             .then(
                 user => {
                     dispatch(success(user));
@@ -39,6 +39,6 @@ function login(username, password) {
 }
 
 function logout() {
-    userService.logout();
+    loginService.logout();
     return {type: loginConstants.LOGOUT};
 }

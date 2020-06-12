@@ -1,6 +1,6 @@
 /*import config from 'config';*/
 
-export const userService = {
+export const loginService = {
     login,
     logout
 };
