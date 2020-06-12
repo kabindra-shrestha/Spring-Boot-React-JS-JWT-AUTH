@@ -10,18 +10,16 @@ class Dashboard extends Component {
     }
 
     render() {
-        const {users, items} = this.props;
+        const {user, users} = this.props;
 
         return (
             <div className="col-md-6 col-md-offset-3">
-                <h1>Hi {users.loading}!</h1>
-                <h1>Hi {items.status}!</h1>
-                {/*<h1>Hi {items.users.firstname}!</h1>
+                <h1>Hi {user.firstname + " " + user.lastname}!</h1>
                 <p>You're logged in with React & JWT!!</p>
                 <h3>Users from secure api end point:</h3>
                 {users.loading && <em>Loading users...</em>}
                 {users.error && <span className="text-danger">ERROR: {users.error}</span>}
-                {users.status && <span className="text-danger">ERROR: {users.status}</span>}*/}
+                {users.status && <span className="text-danger">STATUS: {users.status}</span>}
                 {/*{users.items &&*/}
                 {/*<ul>*/}
                 {/*    {users.items.map((users, index) =>*/}
@@ -32,7 +30,7 @@ class Dashboard extends Component {
                 {/*</ul>*/}
                 {/*}*/}
                 <p>
-                    <Link to="/login">Logout</Link>
+                    <Link to="">Logout</Link>
                 </p>
             </div>
         );
@@ -40,11 +38,13 @@ class Dashboard extends Component {
 }
 
 function mapStateToProps(state) {
-    const {users} = state;
-    const {items} = state.users.items;
+    const {users, authentication} = state;
+    const {user} = authentication;
+    // const {items} = state.users.items;
     return {
+        user,
         users,
-        items
+        // items
     };
 }
 
