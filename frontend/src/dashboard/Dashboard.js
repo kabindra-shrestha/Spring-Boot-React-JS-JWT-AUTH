@@ -19,7 +19,9 @@ class Dashboard extends Component {
                 <h3>Users from secure api end point:</h3>
                 {users.loading && <em>Loading users...</em>}
                 {users.error && <span className="text-danger">ERROR: {users.error}</span>}
-                {users.status && <span className="text-danger">STATUS: {users.status}</span>}
+                {users.usersStatus && <span className="text-danger">STATUS: {users.usersStatus}</span>}
+                {users.usersMessage && <span className="text-danger">MESSAGE: {users.usersMessage}</span>}
+                {/*<h1>Hello {users.usersData.firstname + " " + users.usersData.lastname}!</h1>*/}
                 {/*{users.items &&*/}
                 {/*<ul>*/}
                 {/*    {users.items.map((users, index) =>*/}
@@ -40,11 +42,15 @@ class Dashboard extends Component {
 function mapStateToProps(state) {
     const {users, authentication} = state;
     const {user} = authentication;
-    // const {items} = state.users.items;
+    // const {usersStatus} = users.usersStatus;
+    // const {usersMessage} = users.usersMessage;
+    // const {usersData} = users.usersData;
     return {
         user,
         users,
-        // items
+        // usersStatus,
+        // usersMessage,
+        // usersData
     };
 }
 
