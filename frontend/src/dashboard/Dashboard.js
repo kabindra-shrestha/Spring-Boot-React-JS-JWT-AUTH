@@ -10,27 +10,19 @@ class Dashboard extends Component {
     }
 
     render() {
-        const {user, users} = this.props;
+        const {user, users, usersData} = this.props;
 
         return (
             <div className="col-md-6 col-md-offset-3">
-                <h1>Hi {user.firstname + " " + user.lastname}!</h1>
+                <h1>Hi {user.firstname + " " + user.lastname}! From Authentication Redux</h1>
                 <p>You're logged in with React & JWT!!</p>
-                <h3>Users from secure api end point:</h3>
+
                 {users.loading && <em>Loading users...</em>}
                 {users.error && <span className="text-danger">ERROR: {users.error}</span>}
                 {users.usersStatus && <span className="text-danger">STATUS: {users.usersStatus}</span>}
                 {users.usersMessage && <span className="text-danger">MESSAGE: {users.usersMessage}</span>}
-                {/*<h1>Hello {users.usersData.firstname + " " + users.usersData.lastname}!</h1>*/}
-                {/*{users.items &&*/}
-                {/*<ul>*/}
-                {/*    {users.items.map((users, index) =>*/}
-                {/*        <li key={users.id}>*/}
-                {/*            {users.firstName + ' ' + users.lastName}*/}
-                {/*        </li>*/}
-                {/*    )}*/}
-                {/*</ul>*/}
-                {/*}*/}
+
+                {usersData && <h1>Hi {user.firstname + " " + user.lastname}! From Users Redux</h1>}
                 <p>
                     <Link to="">Logout</Link>
                 </p>
@@ -42,15 +34,11 @@ class Dashboard extends Component {
 function mapStateToProps(state) {
     const {users, authentication} = state;
     const {user} = authentication;
-    // const {usersStatus} = users.usersStatus;
-    // const {usersMessage} = users.usersMessage;
-    // const {usersData} = users.usersData;
+    const {usersData} = users;
     return {
         user,
         users,
-        // usersStatus,
-        // usersMessage,
-        // usersData
+        usersData
     };
 }
 
