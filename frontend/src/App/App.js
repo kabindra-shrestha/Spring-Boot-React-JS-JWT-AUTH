@@ -35,7 +35,7 @@ class App extends Component {
                 <div className={`alert ${alert.type}`}>{alert.message}</div>
                 }
                 <Router history={history}>
-                    <Switch>
+                    <Switch className="padding-left">
                         <PrivateRoute path="/" exact
                                       component={() => <Welcome heading={heading} quote={quote} footer={footer}/>}/>
                         <Route path="/login/admin" exact component={Login}/>
