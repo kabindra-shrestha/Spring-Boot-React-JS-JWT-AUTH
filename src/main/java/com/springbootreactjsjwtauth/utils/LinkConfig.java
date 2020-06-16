@@ -4,8 +4,6 @@ public class LinkConfig {
 
     public static final String BASE_URL = "/api";
     public static final String USER_URL = "/user";
-    public static final String ITEM_URL = "/item";
-    public static final String ITEM_CODE_URL = "/itemCode";
 
     public static final String MAIL_SENDER = "app.tech.0wn@gmail.com";
 
@@ -20,14 +18,6 @@ public class LinkConfig {
     public static final String SUCCESS_USER_FETCHED = "User Fetched Successfully.";
     public static final String SUCCESS_USER_UPDATED = "User Updated Successfully.";
     public static final String SUCCESS_USER_DELETED = "User Deleted Successfully.";
-    public static final String SUCCESS_ITEM_ADDED = "Item successfully added.";
-    public static final String SUCCESS_ITEM_FETCHED = "Item Fetched Successfully.";
-    public static final String SUCCESS_ITEM_UPDATED = "Item Updated Successfully.";
-    public static final String SUCCESS_ITEM_DELETED = "Item Deleted Successfully.";
-    public static final String SUCCESS_ITEM_CODE_ADDED = "Item Code successfully added.";
-    public static final String SUCCESS_ITEM_CODE_FETCHED = "Item Code Fetched Successfully.";
-    public static final String SUCCESS_ITEM_CODE_UPDATED = "Item Code Updated Successfully.";
-    public static final String SUCCESS_ITEM_CODE_DELETED = "Item Code Deleted Successfully.";
 
     public static final String ERROR_USER_NOT_ACTIVATED = "Please activate account through your email.";
     public static final String ERROR_USER_INVALID_OTP = "The activation token has been expired or invalid. Please contact us for further information.";
@@ -42,12 +32,5 @@ public class LinkConfig {
     public static final String ERROR_PASSWORD_INVALID = "Please provide valid password.";
     public static final String ERROR_CONFIRM_PASSWORD_INVALID = "Please provide valid confirm password.";
     public static final String ERROR_PASSWORD_MIS_MATCHED = "Password doesn't match.";
-    public static final String ERROR_ITEM_DOESNT_EXIST = "Item doesn't exists.";
-    public static final String ERROR_ITEM_ALREADY_EXIST = "Items already exists with ";
-    public static final String ERROR_ITEM_NOT_ADDED = "You haven't added any item yet.";
-    public static final String ERROR_LOT_DOESNT_EXIST = "Lot doesn't exists.";
-    public static final String ERROR_ITEM_CODE_DOESNT_EXIST = "Item code doesn't exists.";
-    public static final String ERROR_ITEM_CODE_ALREADY_EXIST = "Items code already exists with ";
-    public static final String ERROR_ITEM_CODE_NOT_ADDED = "You haven't added any item code yet.";
 
 }
